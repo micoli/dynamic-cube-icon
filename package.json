@@ -1,0 +1,42 @@
+{
+	"name": "dynamic-cube-icon",
+	"author":"olivier@micoli.org",
+	"dependencies": {
+		"ao-shader": "^0.3.0",
+		"artpacks": "^1.0.1",
+		"fs": "^0.0.1-security",
+		"gl-buffer": "^2.0.6",
+		"gl-shader": "^3.0.0",
+		"gl-vao": "^1.1.2",
+		"lodash": "^4.17.4",
+		"mouse-change": "^1.4.0",
+		"ndarray": "^1.0.10",
+		"ndarray-ops": "^1.2.1",
+		"shortid": "^2.2.8"
+	},
+	"devDependencies": {
+		"@types/node": "^9.3.0",
+		"@types/three": "^0.84.36",
+		"babel-core": "^6.26.0",
+		"babel-loader": "^7.1.2",
+		"brfs": "^1.4.3",
+		"browserify": "^3.38.0",
+		"css-loader": "^0.28.7",
+		"glslify": "^6.1.0",
+		"ify-loader": "^1.1.0",
+		"style-loader": "^0.19.1",
+		"ts-loader": "^3.2.0",
+		"typescript": "^2.6.2",
+		"webpack": "^3.10.0",
+		"webpack-dev-server": "^2.9.7"
+	},
+	"browserify": {
+		"transform": [
+			"glslify",
+			"brfs"
+		]
+	},
+	"scripts":{
+		"demo":"webpack-dev-server --host 0.0.0.0 --port 8083 --content-base demo/root/ --config demo/webpack.config.js"
+	}
+}
